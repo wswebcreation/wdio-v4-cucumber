@@ -53,8 +53,6 @@ exports.config = {
 		 * Place a reference here  to all JS files that you need during your tests
 		 */
 		require: [
-			//'./features/step_definitions/**/*.js',
-			//'./features/page/**/*.js',
 			'../step_definitions/**/*.js',
 			'../page/**/*.js',
 			'../step_definitions/*.js',
