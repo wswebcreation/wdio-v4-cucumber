@@ -13,7 +13,7 @@ When(/^I navigate to Offers$/, function() {
 	hiltonHomePage.goToOffers();
 });
 
-Then('the Offers page loads successfully', function() {
+Then(/^the Offers page loads successfully$/, function() {
 	assert(offersPage.isLoaded());
 });
 
