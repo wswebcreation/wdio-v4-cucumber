@@ -1,0 +1,30 @@
+{
+  "name": "wdio-v4-cucumber",
+  "version": "1.0.0",
+  "description": "Sample WebdriverIO V4 setup with Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "wdio tests/config/wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wswebcreation/wdio-v4-cucumber.git"
+  },
+  "author": "wswebcreation",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wswebcreation/wdio-v4-cucumber/issues"
+  },
+  "homepage": "https://github.com/wswebcreation/wdio-v4-cucumber#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "wdio-cucumber-framework": "^2.2.8",
+    "wdio-multiple-cucumber-html-reporter": "^1.1.0",
+    "wdio-sauce-service": "^0.4.14",
+    "wdio-spec-reporter": "^0.1.5",
+    "webdriverio": "^4.14.4"
+  }
+}
