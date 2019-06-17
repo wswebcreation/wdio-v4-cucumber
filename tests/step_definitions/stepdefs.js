@@ -5,17 +5,30 @@ const hiltonHomePage = new HiltonHomePage();
 const OffersPage = require('../page/offersPage');
 const offersPage = new OffersPage();
 
-Given(/^I use a web browser to navigate to the Hilton home page$/, () =>  {
-	hiltonHomePage.open();
-});
+defineSupportCode(function({ Given }) {
 
-When(/^I navigate to Offers$/, async function test() {
-	hiltonHomePage.goToOffers();
-});
+	Given(/^I use a web browser to navigate to the Hilton home page$/, function()  {
+		hiltonHomePage.open();
+	});
+  
+	// *** belongs to ta-loging  feature
+	Given(/^I am on the phptravels page$/, function() {
+	  loginPage.open();     // navigating to login page
+	});
+  
+  });
 
-Then('the Offers page loads successfully', async function test() {
-	assert(offersPage.isLoaded());
-});
+// Given(/^I use a web browser to navigate to the Hilton home page$/, function()  {
+// 	hiltonHomePage.open();
+// });
+
+// When(/^I navigate to Offers$/, function() {
+// 	hiltonHomePage.goToOffers();
+// });
+
+// Then('the Offers page loads successfully', function() {
+// 	assert(offersPage.isLoaded());
+// });
 
 // module.exports = function() {
 // 	this.Given('^I use a web browser to navigate to the Hilton home page$', function (callback) {
