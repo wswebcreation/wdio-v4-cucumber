@@ -11,7 +11,7 @@ class OffersPage extends BasePage {
     }
 
     isLoaded() {
-        browser.url == "https://hiltonhonors3.hilton.com/en/offers";
+        browser.getUrl() == "https://hiltonhonors3.hilton.com/en/offers";
     }
 };
 

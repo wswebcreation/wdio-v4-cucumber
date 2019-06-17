@@ -11,11 +11,11 @@ class HiltonHomePage extends BasePage {
     }
 
     isLoaded() {
-        $('#NavMenu').isDisplayedInViewport();
+        browser.isDisplayedInViewport('#NavMenu')
     }
     
     goToOffers() {
-        $('a*=Offers').click();
+        browser.click('a*=Offers');
     }
 };
 
