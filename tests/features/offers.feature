@@ -1,4 +1,4 @@
-Feature: Is the Hilton Home page working?
+Feature: Is the Offers page working
 #Helpful Resouces:
 #1. BDD 101 from Andy Night: https://automationpanda.com/2017/01/30/bdd-101-writing-good-gherkin/
 

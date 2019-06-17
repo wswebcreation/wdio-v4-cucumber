@@ -53,8 +53,12 @@ exports.config = {
 		 * Place a reference here  to all JS files that you need during your tests
 		 */
 		require: [
-			'./features/step_definitions/**/*.js',
-			'./features/page/**/*.js',
+			//'./features/step_definitions/**/*.js',
+			//'./features/page/**/*.js',
+			'../step_definitions/**/*.js',
+			'../page/**/*.js',
+			'../step_definitions/*.js',
+			'../page/*.js'
 		],
 		backtrace: false,   // <boolean> show full backtrace for errors
 		compiler: [],       // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
