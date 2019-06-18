@@ -91,7 +91,7 @@ exports.config = {
 		 * @TODO
 		 * This is increased to 60 seconds (page loads very slow), why did you set it to 2 seconds?
 		 */
-		timeout: 60000,    // <number> timeout for step definitions
+		timeout: 120000,    // <number> timeout for step definitions
 		// timeout: 2000,    // <number> timeout for step definitions
 		tagsInTitle: false,                 // <boolean> add cucumber tags to feature or scenario name
 		snippetSyntax: undefined,           // <string> specify a custom snippet syntax
