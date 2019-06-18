@@ -1,14 +1,15 @@
 class BasePage {
+	constructor() { };
 
-    constructor(){ };
+	get title() { return browser.getTitle(); };
 
-    get title() { return browser.getTitle(); }; 
-    
-    open(path) {
-        browser
-		.url('/${path}');
-    }
+	open(path) {
+		/**
+		 * To use a variable in a string you need to use backticks
+		 */
+		browser.url(`/${path}`);
+	}
 
 }
 
-module.exports = BasePage;
+export default BasePage;

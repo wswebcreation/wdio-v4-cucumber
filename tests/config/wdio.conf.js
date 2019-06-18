@@ -28,6 +28,7 @@ exports.config = {
 		browserName: 'chrome',
 		platform: 'macOS 10.12',
 		version: '70.0',
+		screenResolution: '1600x1200',
 	} ],
 	//
 	// ===================
@@ -49,26 +50,51 @@ exports.config = {
 	//===============
 	framework: 'cucumber',
 	cucumberOpts: {
-		require: ['./step_definitions/**/*.js'
-	],   // <string[]> (file/dir) require files before executing features
-        backtrace: true,    // <boolean> show full backtrace for errors
-        compiler: ['js:babel-core/register'], // <string[]> filetype:compiler used for processing required features
-        failAmbiguousDefinitions: true,       // <boolean< Treat ambiguous definitions as errors
-        dryRun: false,      // <boolean> invoke formatters without executing steps
-        failFast: false,    // <boolean> abort the run on first failure
-        ignoreUndefinedDefinitions: false,    // <boolean> Enable this config to treat undefined definitions as warnings
-        name: [],           // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
-        snippets: true,     // <boolean> hide step definition snippets for pending steps
-        format: ['pretty'], // <string[]> (type[:path]) specify the output format, optionally supply PATH to redirect formatter output (repeatable)
-        colors: true,       // <boolean> disable colors in formatter output
-        snippets: false,    // <boolean> hide step definition snippets for pending steps
-        source: false,      // <boolean> hide source uris
-        profile: [],        // <string[]> (name) specify the profile to use
-        strict: true,       // <boolean> fail if there are any undefined or pending steps
-        tagExpression: 'not @Pending',      // <string> (expression) only execute the features or scenarios with tags matching the expression, see https://docs.cucumber.io/tag-expressions/
-        timeout: 2000,    // <number> timeout for step definitions
-        tagsInTitle: false,                 // <boolean> add cucumber tags to feature or scenario name
-        snippetSyntax: undefined,           // <string> specify a custom snippet syntax
+		// require: [ './step_definitions/**/*.js'
+		/**
+		 * @TODO:
+		 * This was my fault, I should have set the correct path. You need to set a absolute path
+		 * from where the config file is ran based on the pacakge.json, so from the root of the projects
+		 */
+		require: [
+			'./tests/step_definitions/**/*.js',
+			'./tests/config/*.hook.js',
+		],   // <string[]> (file/dir) require files before executing features
+		backtrace: true,    // <boolean> show full backtrace for errors
+		/**
+		 * @TODO:
+		 * Why did you add this?
+		 * The compiler is already in the before hook, see below.
+		 */
+		compiler: [ 'js:@babel/register' ], // <string[]> filetype:compiler used for processing required features
+		// compiler: [],       // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
+		failAmbiguousDefinitions: true,       // <boolean< Treat ambiguous definitions as errors
+		dryRun: false,      // <boolean> invoke formatters without executing steps
+		failFast: false,    // <boolean> abort the run on first failure
+		ignoreUndefinedDefinitions: false,    // <boolean> Enable this config to treat undefined definitions as warnings
+		name: [],           // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
+		snippets: true,     // <boolean> hide step definition snippets for pending steps
+		format: [ 'pretty' ], // <string[]> (type[:path]) specify the output format, optionally supply PATH to redirect formatter output
+													// (repeatable)
+		colors: true,       // <boolean> disable colors in formatter output
+		/**
+		 * @TODO:
+		 * Why did you add the `snippets` again?
+		 */
+		// snippets: false,    // <boolean> hide step definition snippets for pending steps
+		source: false,      // <boolean> hide source uris
+		profile: [],        // <string[]> (name) specify the profile to use
+		strict: true,       // <boolean> fail if there are any undefined or pending steps
+		tagExpression: 'not @Pending',      // <string> (expression) only execute the features or scenarios with tags matching the expression,
+																				// see https://docs.cucumber.io/tag-expressions/
+		/**
+		 * @TODO
+		 * This is increased to 60 seconds (page loads very slow), why did you set it to 2 seconds?
+		 */
+		timeout: 60000,    // <number> timeout for step definitions
+		// timeout: 2000,    // <number> timeout for step definitions
+		tagsInTitle: false,                 // <boolean> add cucumber tags to feature or scenario name
+		snippetSyntax: undefined,           // <string> specify a custom snippet syntax
 	},
 	// cucumberOpts: {
 	// 	/**
