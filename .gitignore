@@ -60,3 +60,6 @@ typings/
 
 .DS_Store
 NightWatch/reports
+
+.idea
+errorShots/
