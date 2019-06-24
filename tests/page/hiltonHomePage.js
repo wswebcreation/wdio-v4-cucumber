@@ -11,20 +11,18 @@ class HiltonHomePage extends BasePage {
 	}
 
 	isLoaded() {
-		browser.isDisplayedInViewport('#NavMenu')
+		return $('#global_header').waitForVisible(25000);
 	}
 
 	goToOffers() {
-		// browser.click('a*=Offers');
-
 		/**
 		 * This is the new preferred way to interact with elements
 		 * and makes the migration to V5 easier because the above method
 		 * will be removed from V5 (no selectors are allowed anymore with
 		 * actions)
 		 */
-
-		$('a*=Offers').click();
+		offersElement = $('a*=menu_item_offers').waitForVisible(25000);
+		offersElement.click();
 	}
 };
 

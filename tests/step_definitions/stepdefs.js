@@ -4,11 +4,8 @@ import HiltonHomePage from '../page/hiltonHomePage';
 import OffersPage from '../page/offersPage';
 
 Given(/^I use a web browser to navigate to the Hilton home page$/, function () {
-	/**
-	 * @TODO:
-	 * There needs to be a verification that the page is loaded
-	 */
 	HiltonHomePage.open();
+	assert(HiltonHomePage.isLoaded());
 });
 
 When(/^I navigate to Offers$/, function () {
