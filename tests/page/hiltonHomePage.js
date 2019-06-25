@@ -21,6 +21,7 @@ class HiltonHomePage extends BasePage {
 		 * will be removed from V5 (no selectors are allowed anymore with
 		 * actions)
 		 */
+		
 		offersElement = $('a*=menu_item_offers').waitForVisible(25000);
 		offersElement.click();
 	}
