@@ -11,7 +11,8 @@ class HiltonHomePage extends BasePage {
 	}
 
 	isLoaded() {
-		return $('#global_header').waitForVisible(25000);
+		const header = $('#global_header');
+		return header.waitForVisible(25000);
 	}
 
 	goToOffers() {
