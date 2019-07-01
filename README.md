@@ -21,6 +21,10 @@ This code is provided on an "AS-IS” basis without warranty of any kind, either
 	```
 
 ### Running Tests
+* Run Tests:
+	```
+	$ npm run test
+	```
 
 * Tests in Parallel:
 	```
