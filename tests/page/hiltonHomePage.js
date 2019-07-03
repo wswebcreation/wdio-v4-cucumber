@@ -23,7 +23,8 @@ class HiltonHomePage extends BasePage {
 		 * actions)
 		 */
 		
-		offersElement = $('a*=menu_item_offers').waitForVisible(25000);
+		offersElement = $('a*=menu_item_offers');
+		offersElement.waitForVisible(25000);
 		offersElement.click();
 	}
 };
