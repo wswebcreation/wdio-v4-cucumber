@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wswebcreation/wdio-v4-cucumber.git"
+    "url": "git+https://github.com/nadvolod/wdio-v4-cucumber.git"
   },
   "author": "wswebcreation",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wswebcreation/wdio-v4-cucumber/issues"
+    "url": "https://github.com/nadvolod/wdio-v4-cucumber/issues"
   },
-  "homepage": "https://github.com/wswebcreation/wdio-v4-cucumber#readme",
+  "homepage": "https://github.com/nadvolod/wdio-v4-cucumber#readme",
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
