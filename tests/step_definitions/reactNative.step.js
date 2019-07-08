@@ -19,7 +19,6 @@ When(/I login in as a (valid|invalid) user/, userType => {
 
 When(/I want to book a room/, table => {
     const bookingData = table.hashes();
-
     Booking.bookRoom(bookingData);
 });
 
