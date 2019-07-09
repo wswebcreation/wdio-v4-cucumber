@@ -1,7 +1,7 @@
 import { Given, When, Then } from 'cucumber';
 import { USERS } from '../config/constants';
-import Login from '../screen-objects/login';
-import Booking from '../screen-objects/booking';
+import LoginPage from '../screen-objects/login';
+import BookingPage from '../screen-objects/booking';
 
 
 Given(/I open the Hilton App/, () => {
@@ -14,12 +14,12 @@ When(/I login in as a (valid|invalid) user/, userType => {
     // in a constant file and provide them to a login method
 
     // Determine based on the userType which user you need to use
-    Login.signIn(USERS[ userType.toUpperCase() ]);
+    LoginPage.signIn(USERS[ userType.toUpperCase() ]);
 });
 
 When(/I want to book a room/, table => {
     const bookingData = table.hashes();
-    Booking.bookRoom(bookingData);
+    BookingPage.bookRoom(bookingData);
 });
 
 Then(/I will be presented a confirmation/, () => {

@@ -8,7 +8,16 @@ Given(/^I use a web browser to navigate to the Hilton home page$/, function () {
 	assert(HiltonHomePage.isLoaded());
 });
 
+Given(/^the user uses a web browser to navigate to the Hilton home page$/, function () {
+	HiltonHomePage.open();
+	assert(HiltonHomePage.isLoaded());
+});
+
 When(/^I navigate to Offers$/, function () {
+	HiltonHomePage.goToOffers();
+});
+
+When(/^the user books a room$/, function () {
 	HiltonHomePage.goToOffers();
 });
 
