@@ -10,14 +10,17 @@ Given(/I open the Hilton App/, () => {
 });
 
 When(/I login in as a (valid|invalid) user/, userType => {
-    // The usertype will tell something about the user, store those credentials somewhere
-    // in a constant file and provide them to a login method
-
-    // Determine based on the userType which user you need to use
+    //TODO this is what the manual testers would write
+    //they can only code what has been created by the Automation Engineers
+    //the Automation Engineers write the logic and maintain it inside of Page Objects
+    //Also, notice how little code is in the Step Definitions, low maintenance
     LoginPage.signIn(USERS[ userType.toUpperCase() ]);
 });
 
 When(/I want to book a room/, table => {
+    //TODO this is what the manual testers would write
+    //they can only code what has been created by the Automation Engineers
+    //the Automation Engineers write the logic and maintain it inside of Page Objects
     const bookingData = table.hashes();
     BookingPage.bookRoom(bookingData);
 });
