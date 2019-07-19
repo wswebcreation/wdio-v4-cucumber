@@ -12,8 +12,8 @@ class PhpTravelsHomePage extends BasePage {
 	}
 
 	isLoaded() {
-		//const header = $('img[src=https://www.phptravels.net/uploads/global/logo.png]');
-		//return header.waitForVisible(10000);
+		const myAccountLocator = $('#li_myaccount');
+		return myAccountLocator.waitForVisible(10000);
 	}
 	
 	get hotelOrCitySearchBox() {

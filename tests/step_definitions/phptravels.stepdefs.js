@@ -5,7 +5,7 @@ import SearchResultsPage from '../page/searchResultsPage';
 
 Given(/^the user navigates to the PHP Travels home page$/, function () {
 	PhpTravelsHomePage.open();
-	//assert(PhpTravelsHomePage.isLoaded());
+	assert(PhpTravelsHomePage.isLoaded());
 });
 
 When(/^the user searches for a room$/, table => {
@@ -17,6 +17,5 @@ Then(/^the user is presented a list of options$/, function () {
 	assert(SearchResultsPage.isLoaded());
 });
 Then(/^the user sees the PHP Travels home page$/, function () {
-	//result = browser.getUrl() === 'https://www.phptravels.net';
-	assert(true);
+	assert(PhpTravelsHomePage.isLoaded());
 });
