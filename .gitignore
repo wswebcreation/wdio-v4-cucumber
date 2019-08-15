@@ -63,3 +63,5 @@ NightWatch/reports
 
 .idea
 errorShots/
+@demo
+*package-lock.json
