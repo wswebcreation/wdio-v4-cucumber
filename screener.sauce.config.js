@@ -27,6 +27,7 @@ var config = require('./screener.config');
       maxConcurrent: 100, // optional available concurrency you have from Sauce Labs
       //extendedDebugging: true, // optional
       //tunnelIdentifier: 'MyTunnel01' // optional
+      
     };
 
   module.exports = config;

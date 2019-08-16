@@ -63,6 +63,18 @@ module.exports = {
         },
         {
             deviceName: 'iPhone 7'
+        },
+        {
+          deviceName: 'iPad Pro'
+        },
+        {
+          deviceName: 'iPad'
+        },
+        {
+          deviceName: 'Galaxy S8'
+        },
+        {
+          deviceName: 'Nexus 10'
         }
       ]
   };
