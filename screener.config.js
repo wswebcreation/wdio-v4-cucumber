@@ -11,21 +11,6 @@ module.exports = {
     // each state consists of a url and a name.
     states: [
       {
-        //This page has dynamic elements that only appear when they are scrolled into view
-        //so we run a script to preload those elements
-        url: 'https://www.ultimateqa.com',
-        name: 'Ultimate QA Home Page',
-        steps: new Steps()
-        .executeScript('window.scrollTo(0,document.body.scrollHeight)')
-        .wait(4000)
-        .snapshot('Loaded')
-        .end()
-      },
-      {
-        url: 'https://www.ultimateqa.com/blog',
-        name: 'Ultimate QA Blog Page'
-      },
-      {
         url: 'https://www.hilton.com',
         name: 'Hilton Home Page'
       },
@@ -33,21 +18,36 @@ module.exports = {
         url: 'https://hiltonhonors3.hilton.com/en_US/hh/search/findhotels/index.htm',
         name: 'Hilton Booking Page'
       },
+      {
+        url: 'https://www.hilton.com/en/hotels/laxswhw-homewood-suites-los-angeles-international-airport/',
+        name: 'Hilton Homewood Suites LA'
+      }
+      //{
+        //This page has dynamic elements that only appear when they are scrolled into view
+        //so we run a script to preload those elements
+      //   url: 'https://www.ultimateqa.com',
+      //   name: 'Ultimate QA Home Page',
+      //   steps: new Steps()
+      //   .executeScript('window.scrollTo(0,document.body.scrollHeight)')
+      //   .wait(4000)
+      //   .snapshot('Loaded')
+      //   .end()
+      // },
     ],
     //What are all of the browsers that we want to test against
     //In this case, they are all overriden in the screener.sauce.config
-    browsers: [
-      {
-        browserName: 'chrome'
-      },
-      {
-        browserName: 'firefox'
-      },
-      {
-        browserName: 'internet explorer',
-        version: '11'
-      }
-    ],
+    // browsers: [
+    //   {
+    //     browserName: 'chrome'
+    //   },
+    //   {
+    //     browserName: 'firefox'
+    //   },
+    //   {
+    //     browserName: 'internet explorer',
+    //     version: '11'
+    //   }
+    // ],
     resolutions: [
         '1024x768',
         {

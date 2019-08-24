@@ -37,6 +37,24 @@ This code is provided on an "AS-IS” basis without warranty of any kind, either
 - BDD 101: https://automationpanda.com/2017/01/25/bdd-101-introducing-bdd/
 - BDD 101: UNIT, INTEGRATION, AND END-TO-END TESTS: https://automationpanda.com/2017/10/14/bdd-101-unit-integration-and-end-to-end-tests/
 
+### Visual Testing Best Practices
+These are the best practices for automated visual testing. Follow them closely to avoid problems and failure in your automation efforts:
+1. Do NOT try to visually validate every page
+It's important to understand that we don't want to try and visually validate every single page right away.
+Start Small, and Build Up! Agile methodoloy! Small pieces of code go to production often.
+This means, add 1 of your most important, Publicly facing pages, across your most important resolutions and browsers.
+Let this run for 5 days, every single day, as part of CI.
+Is it providing you value and are you getting great feedback from this automation?
+If yes, now it's time to add another page.
+2. Always prefer stability over more automation.
+Never forget the goal of automation is to make sure that we help to create high quality software.
+To get to quality software, it's important to release quickly and often. Automation is the key to that!
+However, if automation doesn't provide correct results, it is simply Useless!
+Before adding more automation, always make sure that current automation is 99.5% reliable!
+You can read more here: https://www.ultimateqa.com/automation-patterns-antipatterns/
+3. Only do visual validation on publicly facing websites!
+Visual validation is important for aesthetics.
+
 ### Thanks
 Big thanks to Wim Selles who was the starter of this working solution.
 He provided the foundational working code that made all of this possible.
