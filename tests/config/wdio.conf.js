@@ -29,6 +29,7 @@ exports.config = {
 		platform: 'macOS 10.12',
 		version: '70.0',
 		screenResolution: '1600x1200',
+		tunnelIdentifier: 'NikolaysTunnel'
 	} ],
 	//
 	// ===================
